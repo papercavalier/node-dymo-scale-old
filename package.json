@@ -1,0 +1,32 @@
+{
+   "name": "dymo-scale",
+   "description": "JavaScript wrapper to a Dymo Scale",
+   "version": "0.0.1",
+   "maintainers": [ {
+     "name": "Ezekiel Templin",
+     "email": "zeke@templ.in",
+     "web": "http://templ.in"
+   }, {
+     "name": "Hakan Ensari",
+     "email": "hakan.ensari@papercavalier.com>",
+     "web": "http://hakanensari.com"
+   }],
+   "contributors": [],
+   "bugs": {
+     "url": ""
+   },
+   "licenses": {},
+   "repositories": {},
+   "dependencies": {
+     "socket.io": "~> 0.9.13",
+     "node-hid": "~> 0.2.2"
+   },
+   "homepage": "",
+   "engines": {
+     "node": ">= 0.8.0"
+   },
+   "directories": {
+     "bin": "bin",
+     "lib": "lib"
+   }
+}
