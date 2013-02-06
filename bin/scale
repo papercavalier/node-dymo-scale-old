@@ -1,5 +1,7 @@
 #!/usr/bin/env node
+var io = require('socket.io').listen(8080);
+var Dymo = require('../');
 
-var path = require('path');
-var fs   = require('fs');
-var lib  = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
+io.sockets.on('connection', function (socket) {
+  setInterval(function() { socket.emit('dymo', Dymo.weight().value) }, 250);
+});
