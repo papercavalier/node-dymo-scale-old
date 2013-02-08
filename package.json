@@ -1,6 +1,6 @@
 {
   "name": "dymo-scale",
-  "description": "JavaScript wrapper to a Dymo Scale",
+  "description": "A JavaScript wrapper to Dymo Scales",
   "version": "0.0.1",
   "maintainers": [
     {
@@ -29,7 +29,6 @@
     "node": ">= 0.8.0"
   },
   "directories": {
-    "bin": "bin",
     "lib": "lib"
   }
 }

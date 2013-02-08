@@ -1,7 +1,0 @@
-#!/usr/bin/env node
-var io = require('socket.io').listen(8080);
-var Dymo = require('../');
-
-io.sockets.on('connection', function (socket) {
-  setInterval(function() { socket.emit('dymo', Dymo.weight().value) }, 250);
-});
