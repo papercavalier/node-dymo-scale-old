@@ -22,10 +22,14 @@
   "repositories": {},
   "dependencies": {
     "socket.io": "~0.9.13",
-    "node-hid": "~0.2.2"
+    "node-hid": "~0.2.2",
+    "tap": "~0.4.0"
   },
   "homepage": "",
   "engines": {
     "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "tap ./test"
   }
 }
