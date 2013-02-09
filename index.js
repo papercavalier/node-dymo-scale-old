@@ -11,12 +11,12 @@ module.exports = exports = function() {
     }
   }();
 
-  this.is_alive = function() {
+  this.isAlive = function() {
     return typeof this.device !== "undefined";
   }
 
   this.poll = function() {
-    if(!this.is_alive()) {
+    if(!this.isAlive()) {
       return null;
     }
 
