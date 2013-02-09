@@ -23,6 +23,15 @@ test('polling', function (t) {
     t.end();
   });
 
+  test('weight is 0', function(t) {
+    scale.readData = function () { return [ 3, 5, 11, 255, 0, 0 ] }
+    var data = scale.poll()
+    t.ok(data, 'return data when polled')
+    t.equal(data.value, 0.0, 'return correct value')
+    t.equal(data.unit, false, 'return correct unit')
+    t.end();
+  });
+
   test('no device', function(t) {
     scale.isAlive = function () { return false }
     t.equal(scale.poll(), null, 'polling the scale should return nothing');
