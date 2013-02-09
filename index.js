@@ -15,6 +15,10 @@ module.exports = exports = function() {
     return typeof this.device !== "undefined";
   }
 
+  this.readData = function() {
+    return this.device.getFeatureReport(0xfa13, 7);
+  }
+
   this.poll = function() {
     if(!this.isAlive()) {
       return null;
@@ -22,7 +26,8 @@ module.exports = exports = function() {
 
     var weight = { value: 0.0, unit: false };
 
-    var data = this.device.getFeatureReport(0xfa13, 7);
+    var data = this.readData();
+
     var rawValue = ((256 * data[5]) + data[4]);
 
     if (data[2] === 11) {
