@@ -7,13 +7,17 @@ test('polling', function (t) {
 
   test('weight set to grams', function(t) {
     scale.readData = function () { return [ 3, 4, 2, 0, 140, 9 ] }
-    t.similar(scale.poll(), {value:2444,unit:'grams'}, 'return weight in grams');
+    var data = scale.poll()
+    t.equal(data.value, 2444, 'return correct value')
+    t.equal(data.unit, 'grams', 'return correct unit')
     t.end();
   });
 
   test('weight set to ounces', function(t) {
     scale.readData = function () { return [ 3, 4, 11, 255, 190, 3 ] }
-    t.similar(scale.poll(), {value:95.8,unit:'ounces'}, 'return weight in ounces')
+    var data = scale.poll()
+    t.equal(data.value, 95.8, 'return correct value')
+    t.equal(data.unit, 'ounces', 'return correct unit')
     t.end();
   });
 
