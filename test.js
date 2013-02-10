@@ -33,8 +33,9 @@ test('polling', function (t) {
   });
 
   test('no device', function(t) {
-    scale.isAlive = function () { return false }
-    t.equal(scale.poll(), null, 'polling the scale should return nothing');
+    scale.readData = function () { return false }
+    var data = scale.poll()
+    t.similar(data, null, 'polling the scale should return nothing');
     t.end();
   });
 
