@@ -1,4 +1,4 @@
-module.exports = exports = function() {
+var DymoScale = function() {
   this.device = function() {
     var HID = require('node-hid');
 
@@ -36,3 +36,5 @@ module.exports = exports = function() {
     }
   }
 }
+
+module.exports = exports = new DymoScale();

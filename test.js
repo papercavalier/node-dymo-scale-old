@@ -1,6 +1,5 @@
 var test = require('tap').test
-  , dymo = require("./index")
-  , scale = new dymo();
+  , scale = require("./index");
 
 test('polling', function (t) {
   t.ok(scale)
