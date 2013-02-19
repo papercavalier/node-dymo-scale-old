@@ -1,6 +1,6 @@
 {
   "name": "dymo-scale",
-  "description": "A JavaScript wrapper to Dymo Scales",
+  "description": "A Node.js wrapper to Dymo scales",
   "version": "0.0.1",
   "maintainers": [
     {
@@ -21,9 +21,9 @@
   "licenses": {},
   "repositories": {},
   "dependencies": {
-    "socket.io": "~0.9.13",
-    "node-hid": "~0.2.2",
-    "tap": "~0.4.0"
+    "socket.io": "0.9.x",
+    "node-hid": "0.2.x",
+    "tap": "0.4.x"
   },
   "homepage": "",
   "engines": {
