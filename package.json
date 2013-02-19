@@ -22,7 +22,9 @@
   "repositories": {},
   "dependencies": {
     "socket.io": "0.9.x",
-    "node-hid": "0.2.x",
+    "node-hid": "0.2.x"
+  },
+  "devDependencies": {
     "tap": "0.4.x"
   },
   "homepage": "",
