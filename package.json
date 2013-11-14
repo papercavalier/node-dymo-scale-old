@@ -16,10 +16,13 @@
   ],
   "contributors": [],
   "bugs": {
-    "url": ""
+    "url": "https://github.com/papercavalier/node-dymo-scale/issues"
   },
   "licenses": {},
-  "repositories": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/papercavalier/node-dymo-scale"
+  },
   "dependencies": {
     "socket.io": "0.9.x",
     "node-hid": "0.2.x"
