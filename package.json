@@ -1,7 +1,7 @@
 {
   "name": "dymo-scale",
   "description": "A Node.js wrapper to Dymo scales",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "maintainers": [
     {
       "name": "Ezekiel Templin",
@@ -10,8 +10,8 @@
     },
     {
       "name": "Hakan Ensari",
-      "email": "hakan.ensari@papercavalier.com>",
-      "web": "http://hakanensari.com"
+      "email": "hakan@papercavalier.com>",
+      "web": "https://hakanensari.com"
     }
   ],
   "contributors": [],
