@@ -1,21 +1,22 @@
 var DymoScale = function() {
 
   var HID = require("node-hid");
+  var deviceHandle = null;
 
   this.device = function() {
     // HACK: cache the device in a variable (deviceHandle)
     // On some machines (OS X 10.10+ ?) re-opening the same device
     // results in a "cannot open device" error
-    if(!this.deviceHandle) {
+    if(!deviceHandle) {
       var devices = HID.devices().filter(function(x) {
         return x.manufacturer === "DYMO";
       });
 
       if (devices.length > 0) {
-        this.deviceHandle = new HID.HID(devices[0].path);
+        deviceHandle = new HID.HID(devices[0].path);
       }
     }
-    return this.deviceHandle;
+    return deviceHandle;
   };
 
   this.read = function(callback) {
@@ -24,6 +25,7 @@ var DymoScale = function() {
     if (device) {
       device.read(function(error, data) {
         if (error) {
+          deviceHandle = null;
           return callback(error);
         }
 
